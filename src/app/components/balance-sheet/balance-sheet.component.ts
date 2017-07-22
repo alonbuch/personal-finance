@@ -22,17 +22,14 @@ import * as BalanceActions from '../../store/actions/balance-actions'
 })
 export class BalanceSheetComponent implements OnInit {
   Year= 2017;
-  // assets: AssetGroup[];
-  // liabilities: AssetGroup[];
   balanceState$: Observable<BalanceState>;
-  groups$?: Observable<AssetGroup[]>;
   totalAssets= 0;
   totalLiabilities= 0;
 
   constructor(private modalService: NgbModal,
               private store: Store<AppState> ) {
                   this.balanceState$ = this.store
-                        .select(s => s.balanceState)
+                        .select<BalanceState>((appState) => appState.balanceState)
                         .do(b => console.log('balanceState is:', b));
 
                   this.store.dispatch(new BalanceActions.LoadBalance());
@@ -55,8 +52,7 @@ export class BalanceSheetComponent implements OnInit {
   }
 
 
-  addLiability(event) {
-    // console.log('add liability');
+  addLiability(event) {    // console.log('add liability');
     // const modalRef = this.modalService.open(AssetModalComponent);
     // modalRef.componentInstance.type = eType.Liability;
     // modalRef.componentInstance.assetLiability = new Liability(event.groupId, '', null, null);

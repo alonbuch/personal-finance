@@ -33,7 +33,12 @@ import { balanceReducer } from './store/reducers/balance-reducer';
     HttpModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    StoreModule.forRoot({balance: balanceReducer}),
+    StoreModule.forRoot({balanceState: balanceReducer}, {initialState: {
+                                                    balanceState: {
+                                                            assetGroups: [],
+                                                            isLoading: false
+                                                          }
+                                                  }}),
     EffectsModule.forRoot([BalanceEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 25 //  Retains last 25 states
