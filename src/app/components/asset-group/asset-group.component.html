@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-12">
+    <span class="assetGroupName">{{ assetGroup.groupName }}</span>
+    <input type="image" src="../../assets/Plus.jpg" class="imageButton" (click)="addClicked()" >
+  </div>
+</div>
+
+<div class="row" *ngFor= "let asset of assetGroup.assetList">
+      <div class="col-sm-5">
+        <span>{{asset.name}}</span>
+      </div>
+
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-5">
+        <span>{{asset.value | number:0}}</span>
+      </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-sm-5">
+      <span>סהכ</span>
+    </div>
+
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-5">
+      <span>{{totalValue | number:0}}</span>
+    </div>
+</div>

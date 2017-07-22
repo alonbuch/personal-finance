@@ -1,0 +1,83 @@
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 style="text-align: center">מאזן {{Year}}</h1>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+     <!-- Assets Column -->
+      <div class="col-sm-5" name="Asset-Column">
+
+        <div class= "row">
+          <div class= "cols-sm-12">
+              <h2>נכסים</h2>
+          </div>
+        </div>
+
+        <div class= "row, assetGroup" *ngFor="let assetGroup of balanceState$ | async | groupType: 1">
+            <div class= "cols-sm-12">
+                <app-asset-group [assetGroup]="assetGroup" (addAssetEvent)="addAsset($event)"></app-asset-group>
+            </div>
+        </div>
+
+     </div>
+
+     <div class="col-sm-2"></div>
+
+      <!-- Liabilities Column -->
+     <div class="col-sm-5" name="Liabilities-Column">
+
+        <div class= "row">
+          <div class= "cols-sm-12">
+              <h2>התחיבויות</h2>
+          </div>
+        </div>
+
+        <div class= "row, assetGroup" *ngFor="let assetGroup of groups$ |async | groupType: 2">
+            <div class= "cols-sm-12">
+                <app-asset-group [assetGroup]="assetGroup"  (addLiabilityEvent)="addLiability($event)"></app-asset-group>
+            </div>
+        </div>
+
+     </div>
+
+  </div>
+
+  <hr>
+
+  <!-- סיכום מאזן -->
+  <div class="row">
+      <div class="col-sm-5">
+          <div class="row">
+              <div class="col-sm-5">
+                <span class="totalBalance">סך נכסים</span>
+              </div>
+
+              <div class="col-sm-2"></div>
+
+              <div class="col-sm-5">
+                {{totalAssets | number:0}}
+              </div>
+            </div>
+      </div>
+
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-5">
+          <div class="row">
+                <div class="col-sm-5">
+                  <span class="totalBalance">סך התחיבויות</span>
+                </div>
+
+                <div class="col-sm-2"></div>
+
+                <div class="col-sm-5">
+                  {{totalLiabilities | number:0}}
+                </div>
+          </div>
+      </div>
+  </div>
+

@@ -1,0 +1,70 @@
+ [
+      {
+        "groupId": 3,
+        "groupName": "רכוש קבוע",
+        "groupType": 1,
+        "assetList": [
+          {"groupId": 3, "name": "דירה ", "value": 1000000, "currency": 1},
+          {"groupId": 3, "name": "מגרש", "value": 150000, "currency": 1}
+        ]
+      },
+      {
+        "groupId": 4,
+        "groupname": "חסכון פנסיוני",
+        "groupType": 1,
+        "assetList": [
+          {"groupId": 4, "name": "ביטוח מנהלים", "value": 100000, "currency": 1},
+          {"groupId": 4, "name": "קרן השתלמות א", "value": 150000, "currency": 1},
+          {"groupId": 4, "name": "קרן השתלמות ב", "value": 250000, "currency": 1},
+          {"groupId": 4, "name": "קופת גמל א", "value": 110000, "currency": 1},
+          {"groupId": 4, "name": "קופת גמל ", "value": 50000, "currency": 1}
+        ]
+      },
+      {
+        "groupId": 5,
+        "groupName": "השקעות חול",
+        "groupType": 1,
+        "assetList": [
+          {"groupId": 5, "name": "asset 1", "value": 200000, "currency": 2},
+          {"groupId": 5, "name": "asset 2", "value": 100000, "currency": 2},
+          {"groupId": 5, "name": "asset 3", "value": 65000, "currency": 2},
+          {"groupId": 5, "name": "asset 4", "value": 100000, "currency": 2},
+          {"groupId": 5, "name": "asset 5", "value": 50000, "currency": 2}
+        ]
+      },
+      {
+        "groupId": 6,
+        "groupName": "שוק ההון",
+        "groupType": 1,
+        "assetList": [
+          {"groupId": 6, "name": "ברוקר 1", "value": 500000, "currency": 1},
+          {"groupId": 6, "name": "ברוקר 2", "value": 50000, "currency": 1}
+        ]
+      },
+      {
+        "groupId": 7,
+        "groupName": "חשבונות בנק",
+        "groupType": 1,
+        "assetList": [
+          {"groupId": 7, "name": "חשבון 1", "value": 100000, "currency": 1},
+          {"groupId": 7, "name": "חשבון 1", "value": 50000, "currency": 2}
+        ]
+      },
+      {
+        "groupId": 1,
+        "groupName": "הלוואות",
+        "groupType": 2,
+        "assetList": [
+          {"groupId": 1, "name": "הלוואה 1", "value": 250000, "currency": 1},
+          {"groupId": 1, "name": "הלוואה 2", "value": 220000, "currency": 1}
+        ]
+      },
+      {
+        "groupId": 2,
+        "groupName": "הון",
+        "groupType": 2,
+        "assetList": [
+          {"groupId": 2, "name": "הון עצמי", "value": 4000000, "currency": 1}
+        ]
+      }
+    ]

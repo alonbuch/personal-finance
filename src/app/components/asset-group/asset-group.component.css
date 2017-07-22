@@ -1,0 +1,19 @@
+span.assetGroupName{
+  display: inline-block;
+  vertical-align: top;
+  width: 150px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+hr{
+  margin-top:5px;
+  margin-bottom: 5px;
+}
+input.imageButton{
+  width: 20px;
+  height: 20px;
+}
+span.spacer{
+  float: right;
+  width: 50px;
+}
