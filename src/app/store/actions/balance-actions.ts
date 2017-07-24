@@ -11,6 +11,7 @@ export const LOAD_BALANCE = '[BALANCE] Load Balance';
 export const LOAD_BALANCE_SUCCESS = '[BALANCE] Load Balance Success';
 export const ADD_ASSET_LIABILITY = '[BALANCE] Add Asset Liability';
 export const ADD_ASSET_LIABILITY_SUCCESS = '[BALANCE] Add Asset Liability Success';
+export const ACTION_FAILED = '[BALANCE] Action failed';
 
 export class LoadBalance implements Action {
   readonly type = LOAD_BALANCE;
@@ -32,6 +33,12 @@ export class AddAssetLiabilitySuccess implements Action {
   readonly type = ADD_ASSET_LIABILITY_SUCCESS;
 
   constructor(public payload: IAssetLiability) {}
+}
+
+export class ActionFailed implements Action {
+  readonly type = ACTION_FAILED;
+
+  constructor(public payload: string) {}
 }
 
 

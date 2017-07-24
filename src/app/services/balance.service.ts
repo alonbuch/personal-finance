@@ -6,6 +6,10 @@ import { eType } from '../model/e-type.enum';
 import { eCurrency } from '../model/e-currency.enum';
 import 'rxjs/add/operator/Map';
 import 'rxjs/add/observable/from';
+import { IAssetLiability } from '../model/i-asset-liability';
+import { IGeneralResponse } from '../model/i-general-response';
+
+//  *** https://angular.io/guide/http ***
 
 @Injectable()
 export class BalanceService {
@@ -15,8 +19,11 @@ export class BalanceService {
   getBalance(): Observable<AssetGroup[]> {
         return this.http.get('/assets/balance-data.json')
         .map(res => res.json());
-        // return Observable.from(this.balance);
     }
 
+  // TODO: call real service
+  addAssetLiability(assetLiability: IAssetLiability): Observable<IGeneralResponse> {
+    return this.http.post('myUrl', assetLiability)
+        .map((r) =>  Object.assign({}, {'resultCode': true}))
+  }
 }
-

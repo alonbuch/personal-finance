@@ -19,7 +19,7 @@
 
         <div class= "row, assetGroup" *ngFor="let assetGroup of (balanceState$ | async).assetGroups | groupType: 1">
             <div class= "cols-sm-12">
-                <app-asset-group [assetGroup]="assetGroup" (addAssetEvent)="addAsset($event)"></app-asset-group>
+                <app-asset-group [assetGroup]="assetGroup" (addAssetEvent)="addAssetLiability($event)"></app-asset-group>
             </div>
         </div>
 
@@ -37,7 +37,7 @@
         </div>
         <div class= "row, assetGroup" *ngFor="let assetGroup of (balanceState$ | async).assetGroups | groupType: 2">
             <div class= "cols-sm-12">
-                <app-asset-group [assetGroup]="assetGroup"  (addLiabilityEvent)="addLiability($event)"></app-asset-group>
+                <app-asset-group [assetGroup]="assetGroup"  (addLiabilityEvent)="addAssetLiability($event)"></app-asset-group>
             </div>
         </div>
 
